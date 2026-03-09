@@ -1189,4 +1189,26 @@
     if (window.scrollY > 60) {
       nav.style.padding = '1rem 4rem';
     } else {
-      nav.style.padding = '1.5rem 4rem
+      nav.style.padding = '1.5rem 4rem';
+    }
+  });
+
+  // Form submit
+  function handleSubmit(btn) {
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#2a7a4a';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Send Message →';
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 3000);
+  }
+
+  // Stagger timeline items
+  document.querySelectorAll('.timeline-item').forEach((item, i) => {
+    item.style.animationDelay = (i * 0.15) + 's';
+  });
+</script>
+</body>
+</html>
